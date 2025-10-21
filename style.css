@@ -58,7 +58,7 @@ body {
 
 .stars-container {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     cursor: pointer;
     padding: 10px 0;
 }
@@ -69,8 +69,10 @@ body {
     color: #cccccc; /* Màu XÁM nhẹ ban đầu - Đảm bảo màu được áp dụng */
     transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
     cursor: pointer;
-    /* Ngôi sao là emoji, nên màu sắc (color) có thể không hoàn toàn chính xác, 
-       nhưng nó sẽ hoạt động tốt với shadow và font-size */
+    /* TĂNG VÙNG CHẠM */
+    padding: 5px 8px; /* Tăng padding để tạo không gian an toàn xung quanh ngôi sao */
+    display: block; /* Đảm bảo padding được áp dụng đúng */
+    line-height: 1; /* Cố định chiều cao dòng */
 }
 
 .star.selected {
@@ -105,4 +107,5 @@ body {
     .star:active {
         transform: scale(1); 
     }
+
 }
