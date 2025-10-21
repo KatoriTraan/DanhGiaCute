@@ -1,0 +1,108 @@
+/* GENERAL STYLES */
+body {
+    font-family: 'Comfortaa', cursive;
+    background: linear-gradient(135deg, #fce4ec, #e0f7fa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-sizing: border-box;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6em;
+    color: #ff6f91;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+/* RATING & CHARACTER SECTION */
+.rating-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cute-character {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.character-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.stars-container {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+/* STAR STYLES - KHẮC PHỤC LỖI TẠI ĐÂY */
+.star {
+    font-size: 2.5em;
+    color: #cccccc; /* Màu XÁM nhẹ ban đầu - Đảm bảo màu được áp dụng */
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    /* Ngôi sao là emoji, nên màu sắc (color) có thể không hoàn toàn chính xác, 
+       nhưng nó sẽ hoạt động tốt với shadow và font-size */
+}
+
+.star.selected {
+    color: #ffd700; /* Màu VÀNG đã chọn */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.7); /* Hiệu ứng tỏa sáng */
+}
+
+/* INTERACTION (Di động ưu tiên) */
+.star:active { 
+    transform: scale(1.1);
+}
+
+.feedback-message {
+    font-size: 1.1em;
+    color: #555;
+    min-height: 25px;
+    margin-top: 15px;
+}
+
+/* MEDIA QUERY cho PC/Tablet */
+@media (min-width: 481px) {
+    .container {
+        max-width: 600px;
+        padding: 40px 60px;
+    }
+    .star {
+        font-size: 3em;
+    }
+    .star:hover {
+        transform: scale(1.1); 
+    }
+    .star:active {
+        transform: scale(1); 
+    }
+}
