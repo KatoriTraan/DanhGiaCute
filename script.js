@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const feedbackMessages = {
-        0: 'Hãy chọn số sao để mình biết cảm xúc của bạn nhé! 🥰',
+        0: 'Vui lòng chọn số sao để mình biết mức độ hài lòng của bạn nhé! 🥰',
         1: 'Ôi... 🥺 Bạn có muốn nói cho mình biết điều gì chưa ổn không? Mình sẽ cố gắng thật nhiều! 💪',
         2: 'À... 🤔 Cảm ơn bạn đã đánh giá. Mình sẽ cố gắng hơn nữa! 💪',
         3: 'Hì hì. 😊 Cảm ơn bạn nhiều nhé! Mình sẽ tiếp tục nỗ lực! 💖',
@@ -69,4 +69,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Khởi tạo trạng thái ban đầu (0 sao)
     updateStarDisplay(0); 
+
 });
